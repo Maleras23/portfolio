@@ -8,6 +8,16 @@ export const routes: Routes = [
       loadComponent: () => import('./dashboard/dashboard'),
       children:[
         {
+          path: 'home',
+          title: 'Home',
+          loadComponent: ()=> import('./dashboard/pages/home/home')
+        },
+        {
+          path: 'skills',
+          title: 'Skills',
+          loadComponent: () => import('./dashboard/pages/skills/skills')
+        },
+        {
           path: 'about-me',
           title: 'About Me',
           loadComponent: ()=> import('./dashboard/pages/about-me/about-me')
